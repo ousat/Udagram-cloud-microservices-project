@@ -37,4 +37,4 @@ services:
   frontend:
     image: skn2093/udacity-udagram-frontend
     ports:
-      - "8100:80"
+      - "8100:8080"

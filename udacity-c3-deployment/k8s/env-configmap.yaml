@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 data:
-  AWS_BUCKET: ___INSERT_AWS_BUCKET___
-  AWS_PROFILE: ___INSERT_AWS_PROFILE___
-  AWS_REGION: ___INSERT_AWS_REGION___
-  JWT_SECRET: dtWZecjYjgJ5e9kYwxOQbDCH3v0zZQdvCg==
-  POSTGRESS_DB: Y2Fycwo=
-  POSTGRESS_HOST: Y2Fycy5jZHFnaTlib21zczUudXMtZWFzdC0xLnJkcy5hbWF6b25hd3MuY29tCg==
-  URL: http://localhost:8100  
+  AWS_BUCKET: udagram-photo-bucket
+  AWS_PROFILE: default
+  AWS_REGION: us-east-1
+  JWT_SECRET: dtWZecjYjgJ5e9kYwxOQbDCH3v0zZQdvCg
+  POSTGRESS_DB: cars
+  POSTGRESS_HOST: cars.cdqgi9bomss5.us-east-1.rds.amazonaws.com
+  URL: http://localhost:8100
 metadata:
   name: env-config
   
