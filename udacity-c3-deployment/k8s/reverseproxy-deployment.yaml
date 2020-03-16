@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -6,13 +6,16 @@ metadata:
   name: reverseproxy
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      service: reverseproxy
   template:
     metadata:
       labels:
         service: reverseproxy
     spec:
       containers:
-      - image: scheele/reverseproxy
+      - image: skn2093/reverseproxy
         name: reverseproxy
         imagePullPolicy: Always          
         resources:
@@ -24,6 +27,7 @@ spec:
             cpu: "500m"       
         ports:
         - containerPort: 8080
+        command: ['sh', '-c', 'echo The app is running! && sleep 3600']
       restartPolicy: Always
 
 
