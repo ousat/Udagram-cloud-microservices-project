@@ -56,7 +56,6 @@ spec:
             secretKeyRef:
               name: env-secret
               key: POSTGRESS_USERNAME
-        command: ['sh', '-c', 'echo The app is running! && sleep 3600']
       restartPolicy: Always
 
 

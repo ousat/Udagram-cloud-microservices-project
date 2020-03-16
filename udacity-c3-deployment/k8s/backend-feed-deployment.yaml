@@ -74,8 +74,7 @@ spec:
         volumeMounts:
         - name: aws-secret
           mountPath: "/root/.aws/"
-          readOnly: true    
-        command: ['sh', '-c', 'echo The app is running! && sleep 3600']    
+          readOnly: true
       restartPolicy: Always
       volumes:
       - name: aws-secret
